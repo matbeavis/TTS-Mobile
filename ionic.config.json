@@ -1,0 +1,7 @@
+{
+  "name": "leitor-texto",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
