@@ -1,20 +1,38 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-title>
+  Leitor de textos
+  </ion-title>
   </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  
+  <ion-content [fullscreen]="true">
+  
+  <ion-item>
+  
+  <ion-label position="floating">Texto para leitura</ion-label>
+  <ion-textarea id="texto" name="texto"
+  [(ngModel)]="textoLeitura"></ion-textarea>
+  </ion-item>
+  
+  <ion-button color="danger" expand="block" (click)="setIdioma(1)">
+  <ion-icon slot="start" name="happy"></ion-icon>
+  Português BR
+  </ion-button>
+  
+  <ion-button color="danger" expand="block" (click)="setIdioma(2)">
+  <ion-icon slot="start" name="happy"></ion-icon>
+  English US
+  </ion-button>
+  
+  <ion-item>
+  <ion-label>Idioma Atual</ion-label>
+  <ion-input type="text" [ngModel]="idioma"></ion-input>
+  </ion-item>
+  
+  <ion-button expand="full" (click)="speackText()">
+  <ion-icon slot="start" name="volume-hight-outline"></ion-icon>
+  Speak Text
+  </ion-button>
+  
+  </ion-content>
